@@ -12,8 +12,8 @@
         "nats.d.ts"
     ],
     "scripts": {
-        "setup": "curl -fsSL https://deno.land/x/install/install.sh | sh",
-        "build": "deno upgrade --version 1.4.2 && deno run --allow-all --unstable --reload src/mod.ts && deno bundle --unstable src/mod.ts ./nats.mjs",
+        "setup": "curl -fsSL https://deno.land/x/install/install.sh | sh -s v1.4.2",
+        "build": "deno run --allow-all --unstable --reload src/mod.ts && deno bundle --unstable src/mod.ts ./nats.mjs",
         "prepack": "npm run build",
         "fmt": "deno fmt src/*.ts examples/*.js test/*.js test/*/*.js",
         "start-tls-nats": "cd examples && ../nats-server -c tls.conf",
